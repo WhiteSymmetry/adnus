@@ -1,6 +1,8 @@
 # adnus (AdNuS):  Advanced Number Systems.
 
 ---
+[![PyPI version](https://badge.fury.io/py/adnus.svg)](https://badge.fury.io/py/adnus)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [![DOI](https://zenodo.org/badge/DOI/-.svg)](https://doi.org/-)
