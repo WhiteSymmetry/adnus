@@ -76,10 +76,11 @@ Here's a quick overview of how to use the different number systems available in 
 ### Bicomplex Numbers
 
 ```python
-from adnus.main import BicomplexNumber
+import adnus as ad
+#from adnus import BicomplexNumber
 
-z1 = BicomplexNumber(1 + 2j, 3 + 4j)
-z2 = BicomplexNumber(5 + 6j, 7 + 8j)
+z1 = ad.BicomplexNumber(1 + 2j, 3 + 4j)
+z2 = ad.BicomplexNumber(5 + 6j, 7 + 8j)
 
 print(f"Addition: {z1 + z2}")
 print(f"Multiplication: {z1 * z2}")
@@ -88,10 +89,11 @@ print(f"Multiplication: {z1 * z2}")
 ### Neutrosophic Numbers
 
 ```python
-from adnus.main import NeutrosophicNumber
+import adnus as ad
+# from adnus import NeutrosophicNumber
 
-n1 = NeutrosophicNumber(1.5, 2.5)
-n2 = NeutrosophicNumber(3.0, 4.0)
+n1 = ad.NeutrosophicNumber(1.5, 2.5)
+n2 = ad. NeutrosophicNumber(3.0, 4.0)
 
 print(f"Addition: {n1 + n2}")
 print(f"Multiplication: {n1 * n2}")
