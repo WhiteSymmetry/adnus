@@ -1,5 +1,29 @@
 # adnus (AdNuS):  Advanced Number Systems.
 
+---
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![DOI](https://zenodo.org/badge/DOI/-.svg)](https://doi.org/-)
+
+[![WorkflowHub DOI](https://img.shields.io/badge/DOI-10.48546/workflowhub.datafile.23.1-blue)](https://doi.org/10.48546/workflowhub.datafile.23.1)
+
+[![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/version.svg)](https://anaconda.org/bilgi/adnus)
+[![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/latest_release_date.svg)](https://anaconda.org/bilgi/adnus)
+[![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/platforms.svg)](https://anaconda.org/bilgi/adnus)
+[![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/license.svg)](https://anaconda.org/bilgi/adnus)
+
+[![Open Source](https://img.shields.io/badge/Open%20Source-Open%20Source-brightgreen.svg)](https://opensource.org/)
+[![Documentation Status](https://app.readthedocs.org/projects/adnus/badge/?0.1.0=main)](https://adnus.readthedocs.io/en/latest)
+
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/-/badge)](https://www.bestpractices.dev/projects/-)
+
+[![Python CI](https://github.com/WhiteSymmetry/adnus/actions/workflows/python_ci.yml/badge.svg?branch=main)](https://github.com/WhiteSymmetry/adnus/actions/workflows/python_ci.yml)
+[![codecov](https://codecov.io/gh/WhiteSymmetry/adnus/graph/badge.svg?token=-)](https://codecov.io/gh/WhiteSymmetry/adnus)
+[![Documentation Status](https://readthedocs.org/projects/adnus/badge/?version=latest)](https://adnus.readthedocs.io/en/latest/)
+[![Binder](https://terrarium.evidencepub.io/badge_logo.svg)](https://terrarium.evidencepub.io/v2/gh/WhiteSymmetry/adnus/HEAD)
+[![PyPI version](https://badge.fury.io/py/adnus.svg)](https://badge.fury.io/py/adnus)
+[![PyPI Downloads](https://static.pepy.tech/badge/adnus)](https://pepy.tech/projects/adnus)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 ---
 
@@ -183,7 +207,7 @@ Keçeci, M. (2025). adnus [Data set]. ResearchGate. https://doi.org/
 
 Keçeci, M. (2025). adnus [Data set]. figshare. https://doi.org/
 
-Keçeci, M. (2025). adnus [Data set]. WorkflowHub. https://doi.org/
+Keçeci, M. (2025). adnus [Data set]. WorkflowHub. https://doi.org/10.48546/workflowhub.datafile.23.1
 
 Keçeci, M. (2025). adnus. Open Science Articles (OSAs), Zenodo. https://doi.org/
 
@@ -196,7 +220,7 @@ Keçeci, Mehmet. adnus [Data set]. ResearchGate, 2025. https://doi.org/
 
 Keçeci, Mehmet (2025). adnus [Data set]. figshare, 2025. https://doi.org/
 
-Keçeci, Mehmet. adnus [Data set]. WorkflowHub, 2025. https://doi.org/
+Keçeci, Mehmet. adnus [Data set]. WorkflowHub, 2025. [https://doi.org/](https://doi.org/10.48546/workflowhub.datafile.23.1)
 
 Keçeci, Mehmet. adnus. Open Science Articles (OSAs), Zenodo, 2025. https://doi.org/
 
