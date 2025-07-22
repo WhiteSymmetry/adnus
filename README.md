@@ -69,7 +69,12 @@ cd adnus
 poetry install
 ```
 
-## Usage
+## Kullanım (Türkçe) / Usage (English)
+
+```python
+import adnus
+adnus.__version__
+```
 
 Here's a quick overview of how to use the different number systems available in `adnus`.
 
@@ -149,26 +154,6 @@ pip install git+https://github.com/WhiteSymmetry/adnus.git
 %pip install git+https://github.com/WhiteSymmetry/adnus.git
 ```
 
----
-
-## Kullanım (Türkçe) / Usage (English)
-
-```python
-
-```
-
-```python
-import adnus
-adnus.__version__
-```
-
-```python
-
-```
-
-```python
-
-```
 ---
 
 ### Development
