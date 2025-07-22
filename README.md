@@ -41,12 +41,7 @@
 </p>
 
 ---
-
-
-adnus (AdNuS):  Advanced Number Systems.
-
----
-# AdNuS: Advanced Number Systems
+# adnus (AdNuS):  Advanced Number Systems.
 
 `adnus` is a Python library that provides an implementation of various advanced number systems. This library is designed for mathematicians, researchers, and developers who need to work with number systems beyond the standard real and complex numbers.
 
