@@ -9,6 +9,8 @@
 
 [![WorkflowHub DOI](https://img.shields.io/badge/DOI-10.48546/workflowhub.datafile.23.1-blue)](https://doi.org/10.48546/workflowhub.datafile.23.1)
 
+[![figshare DOI](https://img.shields.io/badge/DOI-10.6084/m9.figshare.29621336-blue)](https://doi.org/10.6084/m9.figshare.29621336)
+
 [![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/version.svg)](https://anaconda.org/bilgi/adnus)
 [![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/latest_release_date.svg)](https://anaconda.org/bilgi/adnus)
 [![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/platforms.svg)](https://anaconda.org/bilgi/adnus)
@@ -207,7 +209,7 @@ If this library was useful to you in your research, please cite us. Following th
 
 Keçeci, M. (2025). adnus [Data set]. ResearchGate. https://doi.org/
 
-Keçeci, M. (2025). adnus [Data set]. figshare. https://doi.org/
+Keçeci, M. (2025). adnus [Data set]. figshare. [https://doi.org/](https://doi.org/10.6084/m9.figshare.29621336)
 
 Keçeci, M. (2025). adnus [Data set]. WorkflowHub. https://doi.org/10.48546/workflowhub.datafile.23.1
 
@@ -220,7 +222,7 @@ Keçeci, M. (2025). adnus. Open Science Articles (OSAs), Zenodo. https://doi.org
 
 Keçeci, Mehmet. adnus [Data set]. ResearchGate, 2025. https://doi.org/
 
-Keçeci, Mehmet (2025). adnus [Data set]. figshare, 2025. https://doi.org/
+Keçeci, M. (2025). <i>adnus</i> (Version 1). figshare. https://doi.org/10.6084/m9.figshare.29621336
 
 Keçeci, Mehmet. adnus [Data set]. WorkflowHub, 2025. [https://doi.org/](https://doi.org/10.48546/workflowhub.datafile.23.1)
 
