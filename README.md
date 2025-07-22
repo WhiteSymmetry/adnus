@@ -11,6 +11,8 @@
 
 [![figshare DOI](https://img.shields.io/badge/DOI-10.6084/m9.figshare.29621336-blue)](https://doi.org/10.6084/m9.figshare.29621336)
 
+[![OSF DOI](https://img.shields.io/badge/DOI-10.17605/OSF.IO/9C26Y-blue)](https://doi.org/10.17605/OSF.IO/9C26Y)
+
 [![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/version.svg)](https://anaconda.org/bilgi/adnus)
 [![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/latest_release_date.svg)](https://anaconda.org/bilgi/adnus)
 [![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/platforms.svg)](https://anaconda.org/bilgi/adnus)
@@ -208,6 +210,8 @@ If this library was useful to you in your research, please cite us. Following th
 ```
 
 Keçeci, M. (2025). adnus [Data set]. ResearchGate. https://doi.org/
+
+Keçeci, M. (2025). adnus [Data set]. OSF. https://doi.org/10.17605/OSF.IO/9C26Y
 
 Keçeci, M. (2025). adnus [Data set]. figshare. [https://doi.org/](https://doi.org/10.6084/m9.figshare.29621336)
 
