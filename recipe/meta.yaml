@@ -1,0 +1,36 @@
+{% set version = "0.1.0" %}
+
+package:
+  name: adnus
+  version: {{ version }}
+
+source:
+  path: src/adnus/  # Yerel kaynak kodunun dizinini belirtin
+  url: 
+  sha256: 
+
+build:
+  noarch: python
+  script: python -m pip install --ignore-installed .
+  number: 0
+
+requirements:
+  host:
+    - python
+    - pip
+    - setuptools
+    - wheel
+    - setuptools_scm
+  run:
+    - python
+
+about:
+  home: https://github.com/WhiteSymmetry/adnus
+  license: MIT
+  summary: 'adnus (AdNuS):  Advanced Number Systems.'
+  description: |
+    adnus (AdNuS):  Advanced Number Systems.
+  dev_url: https://github.com/WhiteSymmetry/adnus
+  doc_url: https://github.com/WhiteSymmetry/adnus
+  doc_source_url: https://github.com/WhiteSymmetry/adnus/blob/main/README.md
+  
