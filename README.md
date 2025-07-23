@@ -5,7 +5,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[![DOI](https://zenodo.org/badge/DOI/-.svg)](https://doi.org/-)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16341919.svg)](https://doi.org/10.5281/zenodo.16341919)
 
 [![WorkflowHub DOI](https://img.shields.io/badge/DOI-10.48546/workflowhub.datafile.23.1-blue)](https://doi.org/10.48546/workflowhub.datafile.23.1)
 
@@ -217,7 +217,7 @@ Keçeci, M. (2025). adnus [Data set]. figshare. [https://doi.org/](https://doi.o
 
 Keçeci, M. (2025). adnus [Data set]. WorkflowHub. https://doi.org/10.48546/workflowhub.datafile.23.1
 
-Keçeci, M. (2025). adnus. Open Science Articles (OSAs), Zenodo. https://doi.org/
+Keçeci, M. (2025). adnus. Open Science Articles (OSAs), Zenodo. https://doi.org/https://doi.org/10.5281/zenodo.16341919
 
 ### Chicago
 
@@ -230,7 +230,7 @@ Keçeci, M. (2025). <i>adnus</i> (Version 1). figshare. https://doi.org/10.6084/
 
 Keçeci, Mehmet. adnus [Data set]. WorkflowHub, 2025. [https://doi.org/](https://doi.org/10.48546/workflowhub.datafile.23.1)
 
-Keçeci, Mehmet. adnus. Open Science Articles (OSAs), Zenodo, 2025. https://doi.org/
+Keçeci, Mehmet. adnus. Open Science Articles (OSAs), Zenodo, 2025. https://doi.org/https://doi.org/10.5281/zenodo.16341919
 
 ```
 
