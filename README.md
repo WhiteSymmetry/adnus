@@ -54,8 +54,8 @@
         <tr>
             <td style="text-align: center;">DOI</td>
             <td style="text-align: center;">
-                <a href="https://doi.org/10.5281/zenodo.15874178">
-                    <img src="https://zenodo.org/badge/DOI/-.svg" alt="DOI" height="18"/>
+                <a href="https://doi.org/10.5281/zenodo.16341919">
+                    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.16341919.svg" alt="DOI" height="18"/>
                 </a>
             </td>
         </tr>
@@ -213,11 +213,11 @@ Keçeci, M. (2025). adnus [Data set]. ResearchGate. https://doi.org/
 
 Keçeci, M. (2025). adnus [Data set]. OSF. https://doi.org/10.17605/OSF.IO/9C26Y
 
-Keçeci, M. (2025). adnus [Data set]. figshare. [https://doi.org/](https://doi.org/10.6084/m9.figshare.29621336)
+Keçeci, M. (2025). adnus [Data set]. figshare. https://doi.org/10.6084/m9.figshare.29621336
 
 Keçeci, M. (2025). adnus [Data set]. WorkflowHub. https://doi.org/10.48546/workflowhub.datafile.23.1
 
-Keçeci, M. (2025). adnus. Open Science Articles (OSAs), Zenodo. https://doi.org/https://doi.org/10.5281/zenodo.16341919
+Keçeci, M. (2025). adnus. Open Science Articles (OSAs), Zenodo. https://doi.org/10.5281/zenodo.16341919
 
 ### Chicago
 
@@ -228,9 +228,9 @@ Keçeci, Mehmet. adnus [Data set]. ResearchGate, 2025. https://doi.org/
 
 Keçeci, M. (2025). <i>adnus</i> (Version 1). figshare. https://doi.org/10.6084/m9.figshare.29621336
 
-Keçeci, Mehmet. adnus [Data set]. WorkflowHub, 2025. [https://doi.org/](https://doi.org/10.48546/workflowhub.datafile.23.1)
+Keçeci, Mehmet. adnus [Data set]. WorkflowHub, 2025. https://doi.org/10.48546/workflowhub.datafile.23.1
 
-Keçeci, Mehmet. adnus. Open Science Articles (OSAs), Zenodo, 2025. https://doi.org/https://doi.org/10.5281/zenodo.16341919
+Keçeci, Mehmet. adnus. Open Science Articles (OSAs), Zenodo, 2025. https://doi.org/10.5281/zenodo.16341919
 
 ```
 
