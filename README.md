@@ -24,7 +24,7 @@
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/-/badge)](https://www.bestpractices.dev/projects/-)
 
 [![Python CI](https://github.com/WhiteSymmetry/adnus/actions/workflows/python_ci.yml/badge.svg?branch=main)](https://github.com/WhiteSymmetry/adnus/actions/workflows/python_ci.yml)
-[![codecov](https://codecov.io/gh/WhiteSymmetry/adnus/graph/badge.svg?token=-)](https://codecov.io/gh/WhiteSymmetry/adnus)
+[![codecov](https://codecov.io/gh/WhiteSymmetry/adnus/graph/badge.svg?token=ES98M5WZFI)](https://codecov.io/gh/WhiteSymmetry/adnus)
 [![Documentation Status](https://readthedocs.org/projects/adnus/badge/?version=latest)](https://adnus.readthedocs.io/en/latest/)
 [![Binder](https://terrarium.evidencepub.io/badge_logo.svg)](https://terrarium.evidencepub.io/v2/gh/WhiteSymmetry/adnus/HEAD)
 [![PyPI version](https://badge.fury.io/py/adnus.svg)](https://badge.fury.io/py/adnus)
