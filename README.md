@@ -30,6 +30,7 @@
 [![PyPI version](https://badge.fury.io/py/adnus.svg)](https://badge.fury.io/py/adnus)
 [![PyPI Downloads](https://static.pepy.tech/badge/adnus)](https://pepy.tech/projects/adnus)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![Linted with Ruff](https://img.shields.io/badge/Linted%20with-Ruff-green?logo=python&logoColor=white)](https://github.com/astral-sh/ruff)
 
 ---
 
