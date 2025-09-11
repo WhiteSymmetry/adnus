@@ -6,8 +6,8 @@ package:
 
 source:
   path: .  # Yerel kaynak kodunun dizinini belirtin
-  url: https://files.pythonhosted.org/packages/4e/d1/1adae6908a9f391e3d2d71560350d2bd3061f10741d0bc1294ce04369c9c/adnus-0.1.4.tar.gz
-  sha256: 5db1cdddb3b189c5eb0c6db63d29d47bac26ab534b8ff77473f0f0fd083d9bba
+  url: https://files.pythonhosted.org/packages/07/5f/1893832bea8a43c30da47504cbecd7959f227445ddb9c0867cba19e1d18a/adnus-0.1.5.tar.gz
+  sha256: 174c8c87aff3b9b71ad31b7e502fe316ba0ca7d4cde1b7652026f3c21a2e65d4
 
 build:
   noarch: python
