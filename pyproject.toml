@@ -8,7 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-numpy = "^2.3"
+numpy = "^2.3.3"
 hypercomplex = "0.3.4"
 
 [tool.poetry.group.dev.dependencies]
