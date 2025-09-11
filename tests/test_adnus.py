@@ -1,15 +1,35 @@
 # tests/test_adnus.py
 import pytest
-import math
+from __future__ import annotations
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
 from fractions import Fraction
+import math
+from typing import List, Union, Generator, Tuple, Any
+from hypercomplex import reals, Complex, Quaternion, Octonion, Sedenion, Pathion, Chingon, Routon, Voudon, cayley_dickson_construction, cayley_dickson_algebra
 from adnus.main import (
+    AdvancedNumber,
     BicomplexNumber,
     NeutrosophicNumber,
     NeutrosophicComplexNumber,
     NeutrosophicBicomplexNumber,
+    HyperrealNumber,
     oresme_sequence,
     harmonic_numbers,
     binet_formula,
+    generate_cayley_dickson_number,
+    generate_cd_chain,
+    reals, 
+    Complex, 
+    Quaternion, 
+    Octonion, 
+    Sedenion, 
+    Pathion, 
+    Chingon, 
+    Routon, 
+    Voudon, 
+    cayley_dickson_construction, 
+    cayley_dickson_algebra
 )
 
 class TestBicomplexNumber:
