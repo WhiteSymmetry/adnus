@@ -11,8 +11,8 @@ python = "^3.11"
 numpy = "^2.3"
 hypercomplex = "0.3.4"
 
-[tool.poetry.dev-dependencies]
-pytest = "^8.4.1"
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.2"
 
 [build-system]
 requires = ["poetry-core", "cython", "setuptools"]
