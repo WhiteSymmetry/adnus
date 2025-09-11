@@ -362,7 +362,7 @@ class HyperrealNumber(AdvancedNumber):
 
 def generate_cayley_dickson_number(dimension: int, *components: float) -> Any:
     """
-    Generates a hypercomplex number using the Cayley-Dickson construction. 
+    Generates a hypercomplex number using the Cayley-Dickson construction.
     Args:
         dimension: The dimension of the hypercomplex number (2^n)
         *components: The components of the number
@@ -398,7 +398,7 @@ def generate_cd_chain(max_level: int = 8) -> List:
     """
     Generates a chain of Cayley-Dickson algebras up to the specified level.
     Args:
-        max_level: Maximum level of the Cayley-Dickson construction   
+        max_level: Maximum level of the Cayley-Dickson construction
     Returns:
         List of hypercomplex number types [CD0, CD1, CD2, ..., CD_max_level]
     """
