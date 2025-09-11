@@ -1,4 +1,4 @@
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: adnus
@@ -6,8 +6,8 @@ package:
 
 source:
   path: .  # Yerel kaynak kodunun dizinini belirtin
-  url: https://files.pythonhosted.org/packages/9f/c1/a6bde10a4aff913cd9164de869afdcc07092cfb7b4026f5e11bc4d5bd932/adnus-0.1.3.tar.gz
-  sha256: d236b9c36a009f052e7148e1d2185cf27275f7b45871124d1c0a91c3282aefeb
+  url: https://files.pythonhosted.org/packages/4e/d1/1adae6908a9f391e3d2d71560350d2bd3061f10741d0bc1294ce04369c9c/adnus-0.1.4.tar.gz
+  sha256: 5db1cdddb3b189c5eb0c6db63d29d47bac26ab534b8ff77473f0f0fd083d9bba
 
 build:
   noarch: python  # Platformdan bağımsız bir paket oluşturur
