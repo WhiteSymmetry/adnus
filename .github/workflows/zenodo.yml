@@ -1,4 +1,4 @@
-name: Publish to Zenodo on Release
+name: Zenodo-Publish to Zenodo on Release
 
 on:
   release:
