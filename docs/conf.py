@@ -6,8 +6,14 @@ copyright = '2025, Mehmet Keçeci'
 # Version Management
 # from setuptools_scm import get_version
 # version = get_version(root='..', relative_to=__file__)
-version = '0.1.1'  # Replace with your actual version number
-release = version
+try:
+    from adnus import __version__
+    version = __version__
+    release = __version__
+except (ImportError, AttributeError) as e:
+    print(f"Warning: Could not import __version__ from kececinumbers: {e}")
+# version = '0.1.2'  # Replace with your actual version number
+# release = version
 
 # General Configuration
 master_doc = 'index'
