@@ -84,6 +84,15 @@
 - **Hyperreal Numbers**: A conceptual implementation of hyperreal numbers.
 - **Extensible Design**: Built with an abstract base class to easily extend and add new number systems.
 - **Fully Typed**: The library is fully type-hinted for better code quality and maintainability.
+- **Real numbers**
+- **Complex numbers**
+- **Quaternion numbers**
+- **Octonion numbers**
+- **Sedenion numbers**
+- **Pathion numbers**
+- **Chingon numbers**
+- **Routon numbers**
+- **Voudon  numbers**
 
 ## Installation
 
@@ -128,6 +137,19 @@ n2 = ad. NeutrosophicNumber(3.0, 4.0)
 
 print(f"Addition: {n1 + n2}")
 print(f"Multiplication: {n1 * n2}")
+```
+
+```python
+import adnus as ad 
+C = cayley_dickson_construction(ad.Complex)
+print(C(3-7j))
+```
+
+```python
+import adnus as ad 
+q1 = ad.Quaternion(1, 2, 3, 4)
+q2 = ad.Quaternion(5, 6, 7, 8)
+print(f"Quaternions: {q1} * {q2} = {q1 * q2}")
 ```
 
 ## Running Tests
