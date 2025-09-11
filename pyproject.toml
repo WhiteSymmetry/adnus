@@ -1,19 +1,30 @@
-[tool.poetry]
+[project]
 name = "adnus"
 version = "0.1.4"
 description = "A Python library for Advanced Number Systems (AdNuS), including Bicomplex, Neutrosophic, Hyperreal numbers, reals, Complex, Quaternion, Octonion, Sedenion, Pathion, Chingon, Routon, Voudon."
-authors = ["Mehmet Keçeci <mkececi@yaani.com>"]
-license = "MIT"
+authors = [
+    {name = "Mehmet Keçeci", email = "mkececi@yaani.com"}
+]
+license = {text = "MIT"}
 readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.3.3,<3.0.0",
+    "hypercomplex==0.3.4"
+]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-numpy = "^2.3.3"
-hypercomplex = "0.3.4"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.4.2"
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4.2,<9.0.0"
+]
+build = [
+    "setuptools>=80.9.0,<81.0.0",
+    "cython>=3.1.3,<4.0.0"
+]
 
 [build-system]
-requires = ["poetry-core", "cython", "setuptools"]
-build-backend = "poetry.core.masonry.api"
+requires = [
+    "setuptools>=61.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
