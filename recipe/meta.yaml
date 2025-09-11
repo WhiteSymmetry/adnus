@@ -6,8 +6,6 @@ package:
 
 source:
   path: src/adnus/  # Yerel kaynak kodunun dizinini belirtin
-  url: 
-  sha256: 
 
 build:
   noarch: python
