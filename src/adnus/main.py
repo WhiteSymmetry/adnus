@@ -362,12 +362,10 @@ class HyperrealNumber(AdvancedNumber):
 
 def generate_cayley_dickson_number(dimension: int, *components: float) -> Any:
     """
-    Creates a hypercomplex number using the Cayley-Dickson construction.
-    
+    Generates a hypercomplex number using the Cayley-Dickson construction. 
     Args:
         dimension: The dimension of the hypercomplex number (2^n)
         *components: The components of the number
-        
     Returns:
         A hypercomplex number of the specified dimension
     """
@@ -398,11 +396,9 @@ def generate_cayley_dickson_number(dimension: int, *components: float) -> Any:
 
 def generate_cd_chain(max_level: int = 8) -> List:
     """
-    Creates a chain of Cayley-Dickson algebras up to the specified level.
-    
+    Generates a chain of Cayley-Dickson algebras up to the specified level.
     Args:
-        max_level: Maximum level of the Cayley-Dickson construction
-        
+        max_level: Maximum level of the Cayley-Dickson construction   
     Returns:
         List of hypercomplex number types [CD0, CD1, CD2, ..., CD_max_level]
     """
@@ -451,7 +447,7 @@ def binet_formula(n: int) -> float:
 # =============================================
 
 if __name__ == "__main__":
-    # Create Cayley-Dickson chain
+    # Generate Cayley-Dickson chain
     CD = generate_cd_chain(8)  # Up to 256 dimensions (CD0 to CD8)
     
     # CD chain mapping:
@@ -465,11 +461,11 @@ if __name__ == "__main__":
     # CD[7] = Routons (128 dimensions)
     # CD[8] = Voudons (256 dimensions)
     
-    # Create an octonion (8 dimensions)
+    # Generate an octonion (8 dimensions)
     octonion = CD[3](1, 0, 2, 0, 3)  # Missing components auto-filled with zeros
     print(f"Octonion: {octonion}")  # -> (1 0 2 0 3 0 0 0)
     
-    # Create other types
+    # Generate other types
     complex_num = CD[1](1, 2)  # Complex number
     quaternion = CD[2](1, 2, 3, 4)  # Quaternion
     sedenion = CD[4](*range(1, 17))  # Sedenion with values 1-16
@@ -498,7 +494,7 @@ if __name__ == "__main__":
     print(f"Quaternions: {q1} * {q2} = {q1 * q2}")
     
     
-    # Create higher dimension numbers using cayley_dickson_algebra
+    # Generate higher dimension numbers using cayley_dickson_algebra
     octonion_type = cayley_dickson_algebra(3)  # 2^3 = 8 dimensions
     octonion = octonion_type(1, 2, 3, 4, 5, 6, 7, 8)
     print(f"Octonion: {octonion}")
