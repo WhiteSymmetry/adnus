@@ -4,7 +4,7 @@ adnus (AdNuS): Advanced Number Systems.
 A Python library for exploring number systems beyond the standard real and complex numbers.
 """
 
-__version__ = "0.1.6"
+__version__ = "0.1.7"
 
 # main.py dosyasındaki ana sınıfları ve fonksiyonları buraya import et
 from .main import (
