@@ -1,6 +1,6 @@
 [project]
 name = "adnus"
-dynamic = ["version"]
+dynamic = ["version", "classifiers", "maintainers"]
 description = "A Python library for Advanced Number Systems (AdNuS), including Bicomplex, Neutrosophic, Hyperreal numbers, reals, Complex, Quaternion, Octonion, Sedenion, Pathion, Chingon, Routon, Voudon."
 authors = [
     {name = "Mehmet Keçeci", email = "mkececi@yaani.com"}
@@ -28,11 +28,15 @@ packages = {find = {where = ["src"]}}
 
 [tool.setuptools.dynamic]
 version = {attr = "adnus._version.__version__"}
+classifiers = {file = "CLASSIFIERS.txt"}  # veya doğrudan liste
+maintainers = [
+    {name = "Mehmet Keçeci", email = "mkececi@yaani.com"}
+]
 
 [build-system]
 requires = [
-    "setuptools>=61.0",
+    "setuptools>=77.0",
     "wheel",
-    "setuptools_scm>=6.2"  # Dynamic versioning için gerekli
+    "setuptools_scm>=6.2"
 ]
 build-backend = "setuptools.build_meta"
