@@ -32,7 +32,7 @@ def get_version():
         pass
     
     # Hiçbiri yoksa varsayılan versiyon
-    return "0.1.0"
+    return "0.1.6"
 
 setup(
     name="adnus",
