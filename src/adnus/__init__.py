@@ -1,9 +1,10 @@
 # src/adnus/__init__.py
 """
 adnus (AdNuS): Advanced Number Systems.
-
 A Python library for exploring number systems beyond the standard real and complex numbers.
 """
+
+__version__ = "0.1.6"
 
 # main.py dosyasındaki ana sınıfları ve fonksiyonları buraya import et
 from .main import (
