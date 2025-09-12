@@ -106,11 +106,6 @@ poetry install
 
 ## Kullanım (Türkçe) / Usage (English)
 
-```python
-import adnus
-adnus.__version__
-```
-
 Here's a quick overview of how to use the different number systems available in `adnus`.
 
 ### Bicomplex Numbers
@@ -141,7 +136,7 @@ print(f"Multiplication: {n1 * n2}")
 
 ```python
 import adnus as ad 
-C = cayley_dickson_construction(ad.Complex)
+C = ad.cayley_dickson_construction(ad.Complex)
 print(C(3-7j))
 ```
 
