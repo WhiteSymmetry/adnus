@@ -1,6 +1,6 @@
 # _version.py
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 __license__ = "MIT"
 __description__ = "adnus (AdNuS):  Advanced Number Systems."
 __author__ = "Mehmet Keçeci"
