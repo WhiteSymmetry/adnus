@@ -29,11 +29,11 @@ setup(
     packages=find_packages(where="src"),
     install_requires=[
         "numpy>=2.3.3,<3.0.0",
-        "hypercomplex==0.3.4"
+        "hypercomplex>=0.3.4"
     ],
     extras_require={
         'dev': ["pytest>=8.4.2,<9.0.0"],
-        'build': ["setuptools>=80.9.0,<81.0.0", "cython>=3.1.3,<4.0.0"]
+        'build': ["setuptools>=80.9.0,<85.0.0", "cython>=3.1.3,<4.0.0"]
     },
     classifiers=[
         "Programming Language :: Python :: 3",
