@@ -33,7 +33,7 @@ setup(
     ],
     extras_require={
         'dev': ["pytest>=8.4.2,<9.0.0"],
-        'build': ["setuptools>=80.9.0,<85.0.0", "cython>=3.1.3,<4.0.0"]
+        'build': ["setuptools>=80.9.0,<85.0.0", "cython>=3.1.4,<4.0.0"]
     },
     classifiers=[
         "Programming Language :: Python :: 3",
