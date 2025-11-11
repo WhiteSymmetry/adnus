@@ -32,7 +32,7 @@ setup(
         "hypercomplex>=0.3.4"
     ],
     extras_require={
-        'dev': ["pytest>=8.4.2,<9.0.0"],
+        'dev': ["pytest>=8.4.2,<10.0.0"],
         'build': ["setuptools>=80.9.0,<85.0.0", "cython>=3.1.4,<4.0.0"]
     },
     classifiers=[

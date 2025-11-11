@@ -24,7 +24,7 @@ classifiers = [
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=8.4.2,<9.0.0"
+    "pytest>=8.4.2,<10.0.0"
 ]
 build = [
     "setuptools>=80.9.0,<85.0.0",
