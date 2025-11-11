@@ -246,7 +246,7 @@ Keçeci, M. (2025). adnus. Open Science Articles (OSAs), Zenodo. https://doi.org
 
 Keçeci, Mehmet. adnus [Data set]. ResearchGate, 2025. https://doi.org/
 
-Keçeci, M. (2025). <i>adnus</i> (Version 1). figshare. https://doi.org/10.6084/m9.figshare.29621336
+Keçeci, M. (2025). adnus [Data set]. figshare. https://doi.org/10.6084/m9.figshare.29621336
 
 Keçeci, Mehmet. adnus [Data set]. WorkflowHub, 2025. https://doi.org/10.48546/workflowhub.datafile.23.1
 
