@@ -3,7 +3,7 @@
 ---
 [![PyPI version](https://badge.fury.io/py/adnus.svg)](https://badge.fury.io/py/adnus)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-AGPL-yellow.svg)](https://opensource.org/license/agpl-v3)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16341919.svg)](https://doi.org/10.5281/zenodo.16341919)
 
@@ -61,10 +61,10 @@
             </td>
         </tr>
         <tr>
-            <td style="text-align: center;">License: MIT</td>
+            <td style="text-align: center;">License: AGPL</td>
             <td style="text-align: center;">
-                <a href="https://opensource.org/licenses/MIT">
-                    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" height="18"/>
+                <a href="https://opensource.org/license/agpl-v3">
+                    <img src="https://img.shields.io/badge/License-AGPL-yellow.svg" alt="License" height="18"/>
                 </a>
             </td>
         </tr>
@@ -258,7 +258,7 @@ Keçeci, Mehmet. adnus. Open Science Articles (OSAs), Zenodo, 2025. https://doi.
 ### Lisans (Türkçe) / License (English)
 
 ```
-This project is licensed under the MIT License.
+This project is licensed under the AGPL License.
 ```
 
 ## Contributing
