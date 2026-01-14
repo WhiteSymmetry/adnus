@@ -11,8 +11,8 @@ def get_version():
                 if line.startswith('__version__'):
                     return line.split('=')[1].strip().strip('"\'')
     except FileNotFoundError:
-        return "0.1.7"
-    return "0.1.7"
+        return "0.1.8"
+    return "0.1.8"
 
 setup(
     name="adnus",
