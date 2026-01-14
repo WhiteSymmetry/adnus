@@ -1,4 +1,4 @@
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: adnus
@@ -6,6 +6,8 @@ package:
 
 source:
   path: .  # Yerel kaynak kodunun dizinini belirtin
+  url: 
+  blake2b-256: 
 
 build:
   noarch: python  # Platformdan bağımsız bir paket oluşturur
