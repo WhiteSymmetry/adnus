@@ -3,16 +3,12 @@ from setuptools import setup, find_packages
 import os
 
 def get_version():
-    """_version.py'den versiyon al"""
-    version_file = os.path.join(os.path.dirname(__file__), 'src', 'adnus', '_version.py')
-    try:
-        with open(version_file, 'r') as f:
-            for line in f:
-                if line.startswith('__version__'):
-                    return line.split('=')[1].strip().strip('"\'')
-    except FileNotFoundError:
-        return "0.1.9"
-    return "0.1.9"
+    with open('src/adnus/__init__.py', 'r', encoding='utf-8') as f:
+        content = f.read()
+    match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", content, re.M)
+    if match:
+        return match.group(1)
+    raise RuntimeError("Unable to find version string.")
 
 setup(
     name="adnus",
@@ -27,6 +23,7 @@ setup(
     url="https://github.com/WhiteSymmetry/adnus",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
+    license = { file="LICENSE" }
     install_requires=[
         "numpy>=2.3.3,<3.0.0",
         "hypercomplex>=0.3.4"
@@ -37,9 +34,9 @@ setup(
     },
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent"
+        "Operating System :: OS Independent",
+        "Intended Audience :: Science/Research",
+        "Topic :: Scientific/Engineering :: Visualization",
     ],
     python_requires='>=3.11',
-    license="MIT",
 )
