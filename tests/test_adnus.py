@@ -49,7 +49,6 @@ class TestBicomplexNumber:
         expected_norm = math.sqrt(5**2 + 13**2)  # sqrt(194)
         assert math.isclose(bc.norm(), expected_norm, rel_tol=1e-10)
 
-
 class TestNeutrosophicNumber:
     def test_addition(self):
         n1 = Neutrosophic(1.5, 2.5)
@@ -161,7 +160,6 @@ class TestHelperFunctions:
         expected = ["Real", "Complex", "Quaternion"]
         assert names == expected
 
-
 class TestFactoryFunctions:
     def test_real_factory(self):
         r = Real(3.14)
@@ -192,7 +190,6 @@ class TestFactoryFunctions:
         for i in range(8):
             assert math.isclose(o[i], float(i + 1))
 
-
 class TestConversions:
     def test_hypercomplex_to_complex(self):
         c = Complex(3, 4)
@@ -218,7 +215,6 @@ class TestConversions:
         # Complex * Real
         result2 = c * r
         assert result == result2  # Should be commutative for scalar multiplication
-
 
 if __name__ == "__main__":
     # Run tests
