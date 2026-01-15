@@ -267,3 +267,56 @@ This project is licensed under the AGPL License.
 
 Contributions are welcome! Please feel free to submit a pull request or open an issue for any bugs or feature requests.
 
+# Pixi:
+
+[![Pixi](https://img.shields.io/badge/Pixi-Pixi-brightgreen.svg)](https://prefix.dev/channels/bilgi)
+
+pixi init adnus
+
+cd adnus
+
+pixi workspace channel add https://repo.prefix.dev/bilgi --prepend
+
+✔ Added https://repo.prefix.dev/bilgi
+
+pixi add adnus
+
+✔ Added adnus >=0.2.0,<2
+
+pixi install
+
+pixi shell
+
+pixi run python -c "import adnus; print(adnus.__version__)"
+
+### Çıktı: 0.2.0
+
+pixi remove adnus
+
+conda install -c https://prefix.dev/bilgi adnus
+
+pixi run python -c "import adnus; print(adnus.__version__)"
+
+### Çıktı: 0.2.0
+
+pixi run pip list | grep adnus
+
+### adnus  0.2.0
+
+pixi run pip show adnus
+
+Name: adnus
+
+Version: 0.2.0
+
+Summary: A Python library for Advanced Number Systems (AdNuS), including Bicomplex, Neutrosophic, Hyperreal numbers, reals, Complex, Quaternion, Octonion, Sedenion, Pathion, Chingon, Routon, Voudon.
+
+Home-page: https://github.com/WhiteSymmetry/adnus
+
+Author: Mehmet Keçeci
+
+Author-email: Mehmet Keçeci <...>
+
+License: GNU AFFERO GENERAL PUBLIC LICENSE
+
+Copyright (c) 2025-2026 Mehmet Keçeci
