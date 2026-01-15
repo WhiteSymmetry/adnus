@@ -9,7 +9,7 @@ authors = [
 maintainers = [
     {name = "Mehmet Keçeci", email = "mkececi@yaani.com"}
 ]
-license = {text = "AGPL-3.0"}
+license = { file="LICENSE" }
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -18,8 +18,9 @@ dependencies = [
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: AGPL-3.0",
     "Operating System :: OS Independent"
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Visualization",
 ]
 
 [project.optional-dependencies]
