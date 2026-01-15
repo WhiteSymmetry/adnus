@@ -26,13 +26,13 @@ Example Usage:
 >>> print(c.norm())  # 5.0
 >>> print(q * q)     # Quaternion multiplication
 
-Version: 0.1.9
+Version: 0.2.0
 Author: Mehmet Keçeci
 License: AGPL-3.0-or-later
 """
 
 # Core version information
-__version__ = "0.1.9"
+__version__ = "0.2.0"
 __author__ = "Mehmet Keçeci"
 __license__ = "AGPL-3.0-or-later"
 __copyright__ = "Copyright (C) 2025-2026 Mehmet Keçeci"
