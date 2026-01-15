@@ -1,6 +1,9 @@
 # setup.py
-from setuptools import setup, find_packages
+import io
 import os
+import re
+from setuptools import setup, find_packages
+import sys
 
 def get_version():
     with open('src/adnus/__init__.py', 'r', encoding='utf-8') as f:
