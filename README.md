@@ -135,8 +135,10 @@ print(f"Multiplication: {n1 * n2}")
 ```
 
 ```python
-import adnus as ad 
-C = ad.cayley_dickson_construction(ad.Complex)
+import adnus as ad
+# Complex(0, 0) bir HypercomplexNumber örneği döndürür
+ComplexClass = type(ad.Complex(0, 0))
+C = ad.cayley_dickson_process(ComplexClass)
 print(C(3-7j))
 ```
 
