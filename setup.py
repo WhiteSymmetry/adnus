@@ -23,7 +23,7 @@ setup(
     url="https://github.com/WhiteSymmetry/adnus",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    license = { file="LICENSE" }
+    license="AGPL-3.0-or-later",
     install_requires=[
         "numpy>=2.3.3,<3.0.0",
         "hypercomplex>=0.3.4"
