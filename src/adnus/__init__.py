@@ -60,17 +60,8 @@ __all__ = [
     'Chingon',
     'Routon',
     'Voudon',
-    
-    # Factory functions
-    'Real',
-    'Complex',
-    'Quaternion',
-    'Octonion',
-    'Sedenion',
-    'Pathion',
-    'Chingon',
-    'Routon',
-    'Voudon',
+    'Bicomplex',
+    'Neutrosophic',
     
     # Parsing functions
     '_parse_complex',
@@ -81,6 +72,7 @@ __all__ = [
     'harmonic_numbers',
     'binet_formula',
     'generate_cd_chain',
+    'generate_cd_chain_names',
     
     # Utility functions
     'cd_number_from_components',
@@ -102,6 +94,8 @@ from .main import (
     cayley_dickson_cebr,
     Real,
     Complex,
+    Bicomplex,
+    Neutrosophic,
     Quaternion,
     Octonion,
     Sedenion,
@@ -111,6 +105,10 @@ from .main import (
     Voudon,
     generate_cd_chain,
     cd_number_from_components,
+    oresme_sequence,
+    harmonic_numbers,
+    binet_formula,
+    generate_cd_chain_names,
 
 # Import parsing utilities
     _parse_complex,
@@ -138,6 +136,8 @@ Pathion = Pathion
 Chingon = Chingon
 Routon = Routon
 Voudon = Voudon
+Bicomplex = Bicomplex
+Neutrosophic = Neutrosophic
 
 # =============================================
 # Package initialization
@@ -196,6 +196,8 @@ def show_available_types():
         "Chingon": "Chingons (64D, via Cayley-Dickson level 6)",
         "Routon": "Routons (128D, via Cayley-Dickson level 7)",
         "Voudon": "Voudons (256D, via Cayley-Dickson level 8)",
+        "Bicomplex": "Bicomplex",
+        "Neutrosophic": "Neutrosophic",
     }
     
     print("Available Number Types in adnus:")
