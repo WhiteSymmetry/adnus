@@ -146,7 +146,7 @@ Neutrosophic = Neutrosophic
 def __getattr__(name):
     """Lazy loading for optional components."""
     if name == 'HAS_KECECI':
-        from .compat import HAS_KECECI
+        from .main import HAS_KECECI
         return HAS_KECECI
     raise AttributeError(f"module 'adnus' has no attribute '{name}'")
 
