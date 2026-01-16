@@ -16,11 +16,10 @@ import warnings
 # Try to import kececinumbers, but provide fallbacks
 try:
     from kececinumbers import (
-        reals, Complex as KComplex, Quaternion as KQuaternion, 
-        Octonion as KOctonion, Sedenion as KSedenion,
-        Pathion as KPathion, Chingon as KChingon, 
-        Routon as KRouton, Voudon as KVoudon,
-        cayley_dickson_process, cayley_dickson_cebir
+        BicomplexNumber as KBicomplexNumber, Quaternion as KQuaternion, 
+        OctonionNumber as KOctonion, SedenionNumber as KSedenion,
+        PathionNumber as KPathion, ChingonNumber as KChingon, 
+        RoutonNumber as KRouton, VoudonNumber as KVoudon,
     )
     HAS_KECECI = True
 except ImportError:
@@ -34,6 +33,12 @@ except ImportError:
     class KChingon: pass
     class KRouton: pass
     class KVoudon: pass
+"""
+'BaseNumber', 'BicomplexNumber', 'Chingon', 'ChingonNumber', 'CliffordNumber', 'Complex', 'Constants', 'DualNumber', 
+'HypercomplexNumber', 'HyperrealNumber', 'NeutrosophicBicomplexNumber', 'NeutrosophicComplexNumber', 'NeutrosophicNumber', 
+'Octonion', 'OctonionNumber', 'Pathion', 'PathionNumber', 'Quaternion', 'Real', 'Routon', 'RoutonNumber', 'Sedenion', 
+'SedenionNumber', 'SplitcomplexNumber', 'SuperrealNumber'
+"""
 
 
 # =============================================
@@ -395,130 +400,6 @@ class BicomplexNumber(AdvancedNumber):
             self.z2[0], self.z2[1],
             dimension=4
         )
-
-
-
-# =============================================
-# Neutrosophic Number
-# =============================================
-
-@dataclass(frozen=True)
-class NeutrosophicNumber(AdvancedNumber):
-    """
-    Neutrosophic number: a + bI where I² = I (indeterminacy).
-    """
-    determinate: float
-    indeterminate: float
-    
-    def __add__(self, other):
-        if isinstance(other, NeutrosophicNumber):
-            return NeutrosophicNumber(
-                self.determinate + other.determinate,
-                self.indeterminate + other.indeterminate
-            )
-        elif isinstance(other, (int, float)):
-            return NeutrosophicNumber(self.determinate + other, self.indeterminate)
-        return NotImplemented
-    
-    def __radd__(self, other):
-        return self.__add__(other)
-    
-    def __sub__(self, other):
-        if isinstance(other, NeutrosophicNumber):
-            return NeutrosophicNumber(
-                self.determinate - other.determinate,
-                self.indeterminate - other.indeterminate
-            )
-        elif isinstance(other, (int, float)):
-            return NeutrosophicNumber(self.determinate - other, self.indeterminate)
-        return NotImplemented
-    
-    def __rsub__(self, other):
-        if isinstance(other, (int, float)):
-            return NeutrosophicNumber(other - self.determinate, -self.indeterminate)
-        return NotImplemented
-    
-    def __mul__(self, other):
-        if isinstance(other, NeutrosophicNumber):
-            # (a + bI)(c + dI) = ac + (ad + bc + bd)I
-            determinate = self.determinate * other.determinate
-            indeterminate = (self.determinate * other.indeterminate +
-                           self.indeterminate * other.determinate +
-                           self.indeterminate * other.indeterminate)
-            return NeutrosophicNumber(determinate, indeterminate)
-        elif isinstance(other, (int, float)):
-            return NeutrosophicNumber(
-                self.determinate * other,
-                self.indeterminate * other
-            )
-        return NotImplemented
-    
-    def __rmul__(self, other):
-        return self.__mul__(other)
-    
-    def __truediv__(self, other):
-        if isinstance(other, (int, float)):
-            if other == 0:
-                raise ZeroDivisionError("Division by zero")
-            return NeutrosophicNumber(
-                self.determinate / other,
-                self.indeterminate / other
-            )
-        elif isinstance(other, NeutrosophicNumber):
-            # Use conjugate: (a + bI)/(c + dI) = (a + bI)(c - dI) / (c² + (c-d)d)
-            conj = other.conjugate()
-            numerator = self * conj
-            denominator = other.determinate**2 + (other.determinate - other.indeterminate) * other.indeterminate
-            if denominator == 0:
-                raise ZeroDivisionError("Division by zero neutrosophic")
-            return NeutrosophicNumber(
-                numerator.determinate / denominator,
-                numerator.indeterminate / denominator
-            )
-        return NotImplemented
-    
-    def __rtruediv__(self, other):
-        if isinstance(other, (int, float)):
-            return NeutrosophicNumber(other, 0) / self
-        return NotImplemented
-    
-    def __neg__(self):
-        return NeutrosophicNumber(-self.determinate, -self.indeterminate)
-    
-    def __pos__(self):
-        return self
-    
-    def __abs__(self):
-        return self.norm()
-    
-    def __eq__(self, other):
-        if isinstance(other, NeutrosophicNumber):
-            return (math.isclose(self.determinate, other.determinate) and
-                    math.isclose(self.indeterminate, other.indeterminate))
-        elif isinstance(other, (int, float)):
-            return math.isclose(self.determinate, other) and math.isclose(self.indeterminate, 0)
-        return False
-    
-    def __ne__(self, other):
-        return not self.__eq__(other)
-    
-    def __hash__(self):
-        return hash((round(self.determinate, 12), round(self.indeterminate, 12)))
-    
-    def __repr__(self):
-        return f"NeutrosophicNumber({self.determinate}, {self.indeterminate})"
-    
-    def __str__(self):
-        if self.indeterminate >= 0:
-            return f"{self.determinate} + {self.indeterminate}I"
-        else:
-            return f"{self.determinate} - {-self.indeterminate}I"
-    
-    def norm(self) -> float:
-        return math.sqrt(self.determinate**2 + self.indeterminate**2)
-    
-    def conjugate(self):
-        return NeutrosophicNumber(self.determinate, -self.indeterminate)
 
 # =============================================
 # Unified Number System: HypercomplexNumber
