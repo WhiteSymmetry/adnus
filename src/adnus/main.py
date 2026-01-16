@@ -16,7 +16,7 @@ import warnings
 # Try to import kececinumbers, but provide fallbacks
 try:
     from kececinumbers import (
-        BicomplexNumber as KBicomplexNumber, Quaternion as KQuaternion, 
+        BicomplexNumber as KBicomplex, Quaternion as KQuaternion, 
         OctonionNumber as KOctonion, SedenionNumber as KSedenion,
         PathionNumber as KPathion, ChingonNumber as KChingon, 
         RoutonNumber as KRouton, VoudonNumber as KVoudon,
