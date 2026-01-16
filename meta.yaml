@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: adnus
@@ -32,7 +32,7 @@ test:
 
 about:
   home: https://github.com/WhiteSymmetry/adnus
-  license: MIT
+  license: AGPL-3.0-or-later
   license_file: LICENSE
   summary: 'adnus (AdNuS): Advanced Number Systems'
   description: |
