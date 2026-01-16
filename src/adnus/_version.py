@@ -1,6 +1,6 @@
 # _version.py
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 __license__ = "AGPL-3.0-or-later"
 __description__ = "adnus (AdNuS):  Advanced Number Systems."
 __author__ = "Mehmet Keçeci"
