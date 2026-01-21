@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: adnus
@@ -23,8 +23,7 @@ requirements:
     - setuptools_scm >=6.2
   run:
     - python >=3.11
-    - numpy >=2.3.3,<3.0.0
-    - hypercomplex ==0.3.4
+    - numpy >=2.3.3
 
 test:
   imports:
