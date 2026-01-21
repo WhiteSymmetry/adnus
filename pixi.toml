@@ -1,0 +1,44 @@
+[workspace]
+preview = ["pixi-build"]
+authors = ["Mehmet Keçeci <mkececi@yaani.com>"]
+channels = ["pypi", "https://prefix.dev/conda-forge", "https://conda.modular.com/max-nightly", "conda-forge", "https://repo.prefix.dev/modular-community"]
+platforms = ["linux-64"]
+name = "adnus"
+version = "0.2.11"
+
+[dependencies]
+python = ">=3.11"
+pip = ">=25.3,<26"
+conda-build = ">=25.11.1,<26"
+setuptools = ">=80.9.0"
+wheel = ">=0.45.1,<0.46"
+hatchling = ">=1.28.0"
+setuptools_scm = ">=9.2.2,<10"
+rattler-build = ">=0.55.0,<0.56"
+quetz = ">=0.10.4,<0.11"
+sqlalchemy = ">=2.0.45,<3"
+adnus = { url = "file:///home/mk/Documents/pixi/adnus-021/dist-noarch/noarch/adnus-0.2.1-pyh4616a5c_1.conda" }
+
+[tasks]
+build = "python -m build"
+start = "python -c 'import adnus; print(adnus.__version__)'"
+lint = "ruff check ."
+fmt = "ruff format ."
+serve = { cmd = "python -m http.server", cwd = "docs" }
+install-adnus = "pip install git+https://github.com/WhiteSymmetry/adnus"
+install = "pip install -e ."
+test = { depends-on = ["install"], cmd = "pytest" }
+install-deps = "pip install adnus"
+
+
+[package]
+name = "adnus"
+version = "0.2.11"
+license = "AGPL-3.0-or-later"
+
+[package.build.backend]
+name = "pixi-build-python"
+version = "*"
+
+[package.host-dependencies]
+hatchling = "*"
