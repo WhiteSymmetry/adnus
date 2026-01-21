@@ -28,12 +28,11 @@ setup(
     packages=find_packages(where="src"),
     license="AGPL-3.0-or-later",
     install_requires=[
-        "numpy>=2.3.3,<3.0.0",
-        "hypercomplex>=0.3.4"
+        "numpy>=2.4.1",
     ],
     extras_require={
-        'dev': ["pytest>=8.4.2,<10.0.0"],
-        'build': ["setuptools>=80.9.0,<85.0.0", "cython>=3.1.4,<4.0.0"]
+        'dev': ["pytest>=9.0.2"],
+        'build': ["setuptools>=80.10.1", "cython>=3.2.4"]
     },
     classifiers=[
         "Programming Language :: Python :: 3",
