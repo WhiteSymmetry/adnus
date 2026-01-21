@@ -43,7 +43,7 @@ jobs:
 
       - name: Create test environment and install dependencies
         run: |
-          conda create -n test-env -y python=${{ matrix.python-version }} hypercomplex pytest pytest-cov
+          conda create -n test-env -y python=${{ matrix.python-version }} pytest pytest-cov
           
 
       - name: Run development tests
