@@ -4,10 +4,10 @@ name = "adnus"
 dynamic = ["version"]
 description = "A Python library for Advanced Number Systems (AdNuS), including Bicomplex, Neutrosophic, Hyperreal numbers, reals, Complex, Quaternion, Octonion, Sedenion, Pathion, Chingon, Routon, Voudon."
 authors = [
-    {name = "Mehmet Keçeci", email = "mkececi@yaani.com"}
+    {name = "Mehmet Keçeci", email = "enfo@tuta.io"}
 ]
 maintainers = [
-    {name = "Mehmet Keçeci", email = "mkececi@yaani.com"}
+    {name = "Mehmet Keçeci", email = "enfo@tuta.io"}
 ]
 license = { file="LICENSE" }
 readme = "README.md"
