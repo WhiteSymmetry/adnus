@@ -21,7 +21,7 @@
 [![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/license.svg)](https://anaconda.org/bilgi/adnus)
 
 [![Open Source](https://img.shields.io/badge/Open%20Source-Open%20Source-brightgreen.svg)](https://opensource.org/)
-[![Documentation Status](https://app.readthedocs.org/projects/adnus/badge/?0.2.3=main)](https://adnus.readthedocs.io/en/latest)
+[![Documentation Status](https://app.readthedocs.org/projects/adnus/badge/?0.2.4=main)](https://adnus.readthedocs.io/en/latest)
 
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/-/badge)](https://www.bestpractices.dev/projects/-)
 
@@ -284,7 +284,7 @@ pixi workspace channel add https://repo.prefix.dev/bilgi --prepend
 
 pixi add adnus
 
-✔ Added adnus >=0.2.3,<2
+✔ Added adnus >=0.2.4,<2
 
 pixi install
 
@@ -292,7 +292,7 @@ pixi shell
 
 pixi run python -c "import adnus; print(adnus.__version__)"
 
-### Çıktı: 0.2.3
+### Çıktı: 0.2.4
 
 pixi remove adnus
 
@@ -300,17 +300,17 @@ conda install -c https://prefix.dev/bilgi adnus
 
 pixi run python -c "import adnus; print(adnus.__version__)"
 
-### Çıktı: 0.2.3
+### Çıktı: 0.2.4
 
 pixi run pip list | grep adnus
 
-### adnus  0.2.3
+### adnus  0.2.4
 
 pixi run pip show adnus
 
 Name: adnus
 
-Version: 0.2.3
+Version: 0.2.4
 
 Summary: A Python library for Advanced Number Systems (AdNuS), including Bicomplex, Neutrosophic, Hyperreal numbers, reals, Complex, Quaternion, Octonion, Sedenion, Pathion, Chingon, Routon, Voudon.
 
