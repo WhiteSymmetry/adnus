@@ -4,19 +4,19 @@ schema_version: 1
 # this sets up "context variables" (in this case name and version) that
 # can later be used in Jinja expressions
 context:
-  version: 0.2.3
+  version: 0.2.40
   name: adnus
 
 # top level package information (name and version)
 package:
   name: adnus
-  version: 0.2.3
+  version: 0.2.40
 
 # location to get the source from
 #`source` are `url`, `sha256`, `md5`, `patches`, `file_name` and `target_directory`
 source:
-  url: https://files.pythonhosted.org/packages/15/63/290bce187fbb64325d9834307d3354e2407e0be85681dbce5eac98532754/adnus-0.2.3.tar.gz
-  sha256: ae734a1f3747e831c825843ac1021b7f5ef9daea868df1d2708760b6ddfeceb6
+  url: 
+  sha256: 
 
 # build number (should be incremented if a new build is made, but version is not incrementing)
 build:
