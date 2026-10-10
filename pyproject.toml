@@ -32,11 +32,8 @@ build = [
 ]
 
 [tool.setuptools]
-package-dir = {"" = "src"}
-packages = {find = {where = ["src"]}}
-
-[tool.setuptools.dynamic]
-version = {attr = "adnus._version.__version__"}
+package-dir = {"" = "adnus"}
+packages = {find = {where = ["adnus"]}}
 
 [build-system]
 requires = [
