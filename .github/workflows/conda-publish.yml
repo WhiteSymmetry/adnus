@@ -30,18 +30,28 @@ jobs:
 
       - name: Install Conda-Build and Conda-Verify
         run: conda install -n base conda-build -y
-
+      
       - name: Build the package for Python ${{ matrix.python-version }}
+        shell: bash
         run: |
-          export PKG_VERSION=$(echo "$PYPI_JSON" | python3 -c "
+          set -euo pipefail
+      
+          if ! PKG_VERSION="$(git describe --tags --abbrev=0 2>/dev/null)"; then
+            echo "HATA: Bu commit için erişilebilir bir Git etiketi bulunamadı."
+            echo "Sürüm etiketi ekleyin (ör. v1.2.3) veya aşağıdaki yedek sürüm yöntemini kullanın."
+            exit 1
+          fi
+      
+          PKG_VERSION="${PKG_VERSION#v}"
           echo "Building version: $PKG_VERSION for Python ${{ matrix.python-version }}"
-          
-          conda build . --python ${{ matrix.python-version }} --output-folder ./dist
-          
+      
+          conda build . --python "${{ matrix.python-version }}" --output-folder ./dist
+      
           if [ -z "$(ls -A dist)" ]; then
             echo "HATA: Hiçbir conda paketi oluşturulmadı."
             exit 1
           fi
+      
           echo "Oluşturulan paket:"
           ls -l dist
 
