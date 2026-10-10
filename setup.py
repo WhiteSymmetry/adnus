@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 import sys
 
 def get_version():
-    with open('src/adnus/__init__.py', 'r', encoding='utf-8') as f:
+    with open('adnus/__init__.py', 'r', encoding='utf-8') as f:
         content = f.read()
     match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", content, re.M)
     if match:
