@@ -19,6 +19,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Diagnose Git tags
+        run: |
+          git status --short
+          git tag --list
+          git log -1 --oneline --decorate
+          git describe --tags --abbrev=0
       
       - name: Setup Miniconda for Python ${{ matrix.python-version }}
         uses: conda-incubator/setup-miniconda@v4
@@ -36,23 +47,19 @@ jobs:
         run: |
           set -euo pipefail
       
-          if ! PKG_VERSION="$(git describe --tags --abbrev=0 2>/dev/null)"; then
-            echo "HATA: Bu commit için erişilebilir bir Git etiketi bulunamadı."
-            echo "Sürüm etiketi ekleyin (ör. v1.2.3) veya aşağıdaki yedek sürüm yöntemini kullanın."
-            exit 1
+          PKG_VERSION="$(git describe --tags --abbrev=0 2>/dev/null || true)"
+          if [ -z "$PKG_VERSION" ]; then
+            PKG_VERSION="0.0.0.dev$(git rev-parse --short HEAD)"
           fi
-      
           PKG_VERSION="${PKG_VERSION#v}"
-          echo "Building version: $PKG_VERSION for Python ${{ matrix.python-version }}"
       
+          echo "Building version: $PKG_VERSION for Python ${{ matrix.python-version }}"
           conda build . --python "${{ matrix.python-version }}" --output-folder ./dist
       
-          if [ -z "$(ls -A dist)" ]; then
+          test -n "$(ls -A dist)" || {
             echo "HATA: Hiçbir conda paketi oluşturulmadı."
             exit 1
-          fi
-      
-          echo "Oluşturulan paket:"
+          }
           ls -l dist
 
       - name: Create test environment and install dependencies
