@@ -21,7 +21,7 @@
 [![Anaconda-Server Badge](https://anaconda.org/bilgi/adnus/badges/license.svg)](https://anaconda.org/bilgi/adnus)
 
 [![Open Source](https://img.shields.io/badge/Open%20Source-Open%20Source-brightgreen.svg)](https://opensource.org/)
-[![Documentation Status](https://app.readthedocs.org/projects/adnus/badge/?0.1.0=main)](https://adnus.readthedocs.io/en/latest)
+[![Documentation Status](https://app.readthedocs.org/projects/adnus/badge/?0.2.3=main)](https://adnus.readthedocs.io/en/latest)
 
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/-/badge)](https://www.bestpractices.dev/projects/-)
 
