@@ -7,30 +7,35 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
 
 jobs:
   build-publish:
     runs-on: ubuntu-latest
+
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.14"]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
-
-      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Diagnose Git tags
+        shell: bash
         run: |
+          set -euo pipefail
+          echo "--- Git status ---"
           git status --short
+          echo "--- Tags ---"
           git tag --list
+          echo "--- Current commit ---"
           git log -1 --oneline --decorate
-          git describe --tags --abbrev=0
-      
+          echo "--- Latest reachable tag (if any) ---"
+          git describe --tags --abbrev=0 || true
+
       - name: Setup Miniconda for Python ${{ matrix.python-version }}
         uses: conda-incubator/setup-miniconda@v4
         with:
@@ -39,73 +44,105 @@ jobs:
           channels: conda-forge,defaults
           channel-priority: strict
 
-      - name: Install Conda-Build and Conda-Verify
-        run: conda install -n base conda-build -y
-      
-      - name: Build the package for Python ${{ matrix.python-version }}
+      - name: Install Conda-Build
         shell: bash
         run: |
           set -euo pipefail
-      
+          conda install -n base -y conda-build anaconda-client
+
+      - name: Build package for Python ${{ matrix.python-version }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
           PKG_VERSION="$(git describe --tags --abbrev=0 2>/dev/null || true)"
           if [ -z "$PKG_VERSION" ]; then
             PKG_VERSION="0.0.0.dev$(git rev-parse --short HEAD)"
           fi
           PKG_VERSION="${PKG_VERSION#v}"
-      
+
           echo "Building version: $PKG_VERSION for Python ${{ matrix.python-version }}"
-          conda build . --python "${{ matrix.python-version }}" --output-folder ./dist
-      
-          test -n "$(ls -A dist)" || {
+
+          mkdir -p dist
+
+          conda build ./conda-recipe \
+            --python "${{ matrix.python-version }}" \
+            --output-folder ./dist
+
+          if ! find dist -type f \( -name '*.conda' -o -name '*.tar.bz2' \) -print -quit | grep -q .; then
             echo "HATA: Hiçbir conda paketi oluşturulmadı."
             exit 1
-          }
-          ls -l dist
+          fi
 
-      - name: Create test environment and install dependencies
+          echo "Oluşturulan paketler:"
+          find dist -type f \( -name '*.conda' -o -name '*.tar.bz2' \) -print
+
+      - name: Create test environment
+        shell: bash
         run: |
-          conda create -n test-env -y python=${{ matrix.python-version }} pytest pytest-cov
-          
+          set -euo pipefail
+          conda create -n test-env -y \
+            "python=${{ matrix.python-version }}" \
+            pytest \
+            pytest-cov
 
       - name: Run development tests
+        shell: bash
         run: |
-          conda run -n test-env --no-capture-output python -m pytest tests/ --cov=adnus
+          set -euo pipefail
+          conda run -n test-env --no-capture-output \
+            python -m pytest tests/ --cov=adnus
 
       - name: Install and test the built package
+        shell: bash
         run: |
-          PACKAGE_FILE=$(ls dist/*.conda | head -n 1)
+          set -euo pipefail
+
+          PACKAGE_FILE="$(find dist -type f \( -name '*.conda' -o -name '*.tar.bz2' \) | head -n 1)"
+          if [ -z "$PACKAGE_FILE" ]; then
+            echo "HATA: Test edilecek conda paketi bulunamadı."
+            exit 1
+          fi
+
+          echo "Installing: $PACKAGE_FILE"
           conda install -n test-env -y "$PACKAGE_FILE"
-          conda run -n test-env --no-capture-output python -c "import adnus; print('Import successful for Python ${{ matrix.python-version }}!')"
 
-      - name: Debug - List files in the workspace
-        run: |
-          echo "--- Current Working Directory ---"
-          pwd
-          echo "--- Recursive file listing ---"
-          ls -R
-          echo "--- End of file listing ---"
+          conda run -n test-env --no-capture-output \
+            python -c "import adnus; print('Import successful for Python ${{ matrix.python-version }}!')"
 
-      - name: Upload to Anaconda Cloud
-        if: success()
+      - name: Upload package to Anaconda Cloud
+        if: success() && github.event_name == 'release'
+        shell: bash
         env:
           ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
         run: |
-          PACKAGE_FILES=$(find dist -name "*.conda")
-          
-          if [ -z "$PACKAGE_FILES" ]; then
-            echo "HATA: Yüklenecek .conda dosyası bulunamadı!"
+          set -euo pipefail
+
+          if [ -z "${ANACONDA_TOKEN:-}" ]; then
+            echo "HATA: ANACONDA_TOKEN secret tanımlı değil."
+            exit 1
+          fi
+
+          mapfile -t PACKAGE_FILES < <(
+            find dist -type f \( -name '*.conda' -o -name '*.tar.bz2' \)
+          )
+
+          if [ "${#PACKAGE_FILES[@]}" -eq 0 ]; then
+            echo "HATA: Yüklenecek conda paketi bulunamadı."
             exit 1
           fi
 
           echo "Yüklenecek paketler:"
-          echo "$PACKAGE_FILES"
-          
-          conda install -n base -y anaconda-client
-          conda run -n base anaconda -t $ANACONDA_TOKEN upload \
-            $PACKAGE_FILES \
+          printf '%s\n' "${PACKAGE_FILES[@]}"
+
+          conda run -n base anaconda \
+            -t "$ANACONDA_TOKEN" \
+            upload "${PACKAGE_FILES[@]}" \
             --label main \
             --skip-existing
 
       - name: Cleanup test environment
         if: always()
-        run: conda env remove -n test-env || true
+        shell: bash
+        run: |
+          conda env remove -n test-env -y || true
