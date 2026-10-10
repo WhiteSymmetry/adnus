@@ -1,5 +1,7 @@
 # adnus (AdNuS):  Advanced Number Systems.
 
+# AdNuS <img src="https://github.com/WhiteSymmetry/adnus/blob/main/docs/adnus.png" alt="adnus" align="right" height="140"/>
+
 ---
 [![PyPI version](https://badge.fury.io/py/adnus.svg)](https://badge.fury.io/py/adnus)
 
