@@ -1,4 +1,7 @@
-name: PyPI-Publish Python Package to PyPI-Resmi
+name: PyPI-Publish Python Package to PyPI-Resmî
+permissions:
+  contents: read
+  pull-requests: write
 
 on:
   push:
