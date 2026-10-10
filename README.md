@@ -284,7 +284,7 @@ pixi workspace channel add https://repo.prefix.dev/bilgi --prepend
 
 pixi add adnus
 
-✔ Added adnus >=0.2.0,<2
+✔ Added adnus >=0.2.3,<2
 
 pixi install
 
@@ -292,7 +292,7 @@ pixi shell
 
 pixi run python -c "import adnus; print(adnus.__version__)"
 
-### Çıktı: 0.2.0
+### Çıktı: 0.2.3
 
 pixi remove adnus
 
@@ -300,17 +300,17 @@ conda install -c https://prefix.dev/bilgi adnus
 
 pixi run python -c "import adnus; print(adnus.__version__)"
 
-### Çıktı: 0.2.0
+### Çıktı: 0.2.3
 
 pixi run pip list | grep adnus
 
-### adnus  0.2.0
+### adnus  0.2.3
 
 pixi run pip show adnus
 
 Name: adnus
 
-Version: 0.2.0
+Version: 0.2.3
 
 Summary: A Python library for Advanced Number Systems (AdNuS), including Bicomplex, Neutrosophic, Hyperreal numbers, reals, Complex, Quaternion, Octonion, Sedenion, Pathion, Chingon, Routon, Voudon.
 
