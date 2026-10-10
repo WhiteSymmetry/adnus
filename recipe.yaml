@@ -31,10 +31,10 @@ requirements:
     - pip
     - setuptools
     - wheel
+    - numpy
   run:
    - python >=3.11  # hypercomplex uyumlu versiyon
    - numpy  # adnus numpy kullanıyor
-   - pip
 
 # tests to validate that the package works as expected
 #tests:
