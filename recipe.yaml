@@ -4,18 +4,17 @@ schema_version: 1
 # this sets up "context variables" (in this case name and version) that
 # can later be used in Jinja expressions
 context:
-  version: 0.2.2
+  version: 0.2.3
   name: adnus
 
 # top level package information (name and version)
 package:
   name: adnus
-  version: 0.2.2
+  version: 0.2.3
 
 # location to get the source from
 #`source` are `url`, `sha256`, `md5`, `patches`, `file_name` and `target_directory`
 source:
-  path: .
   url: 
   sha256: 
 
@@ -47,7 +46,7 @@ requirements:
 # information about the package
 about:
   homepage: https://github.com/WhiteSymmetry/adnus/
-  license: GPL-3.0-or-later
+  license: AGPL-3.0-or-later
   summary: 'adnus'
   description: |
     adnus
