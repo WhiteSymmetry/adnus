@@ -35,6 +35,11 @@ build = [
 package-dir = {"" = "adnus"}
 packages = {find = {where = ["adnus"]}}
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["adnus", "adnus.*"]
+namespaces = false
+
 [build-system]
 requires = [
     "setuptools>=80.10.1",
