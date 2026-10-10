@@ -24,8 +24,8 @@ setup(
     maintainer="Mehmet Keçeci",
     maintainer_email="enfo@tuta.io",
     url="https://github.com/WhiteSymmetry/adnus",
-    package_dir={"": "src"},
-    packages=find_packages(where="src"),
+    package_dir={"": "adnus"},
+    packages=find_packages(where="adnus"),
     license="AGPL-3.0-or-later",
     install_requires=[
         "numpy>=2.4.1",
