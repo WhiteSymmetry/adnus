@@ -1,7 +1,7 @@
 # Project Information
 project = 'adnus'
 author = 'Mehmet Keçeci'
-copyright = '2025, Mehmet Keçeci'
+copyright = '2025-2026, Mehmet Keçeci'
 
 # Version Management
 # from setuptools_scm import get_version
@@ -12,7 +12,7 @@ try:
     release = __version__
 except (ImportError, AttributeError) as e:
     print(f"Warning: Could not import __version__ from kececinumbers: {e}")
-# version = '0.1.2'  # Replace with your actual version number
+# version = '0.2.3'  # Replace with your actual version number
 # release = version
 
 # General Configuration
@@ -27,5 +27,5 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # HTML Output Configuration
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-html_logo = 'logo.png'  # Optional: Add your project logo
+html_logo = 'adnus.png'  # Optional: Add your project logo
 html_favicon = 'favicon.ico'  # Optional: Add a favicon
