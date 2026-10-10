@@ -37,4 +37,6 @@ name = "pixi-build-python"
 version = "*"
 
 [package.host-dependencies]
-hatchling = "*"
+python = ">=3.11"
+setuptools = ">=84.0.0"
+pip = "*"
