@@ -28,7 +28,7 @@ Example Usage:
 """
 
 # Core version information
-__version__ = "0.2.3"
+__version__ = "0.2.4"
 __author__ = "Mehmet Keçeci"
 __license__ = "AGPL-3.0-or-later"
 __copyright__ = "Copyright (C) 2025-2026 Mehmet Keçeci"
@@ -78,7 +78,7 @@ __all__ = [
 ]
 
 # Import core modules
-from .main import (
+from .adnus import (
     AdvancedNumber,
     ComplexNumber,
     BicomplexNumber,
@@ -142,7 +142,7 @@ Neutrosophic = Neutrosophic
 def __getattr__(name):
     """Lazy loading for optional components."""
     if name == 'HAS_KECECI':
-        from .main import HAS_KECECI
+        from .adnus import HAS_KECECI
         return HAS_KECECI
     raise AttributeError(f"module 'adnus' has no attribute '{name}'")
 
