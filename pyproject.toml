@@ -32,8 +32,7 @@ build = [
 ]
 
 [tool.setuptools]
-package-dir = {"" = "adnus"}
-packages = {find = {where = ["adnus"]}}
+include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["."]
