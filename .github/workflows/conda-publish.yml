@@ -44,6 +44,17 @@ jobs:
           channels: conda-forge,defaults
           channel-priority: strict
 
+      - name: Inspect built package
+        shell: bash
+        run: |
+          set -euo pipefail
+          PACKAGE_FILE="$(find dist -type f -name '*.conda' | head -n 1)"
+          conda package contents "$PACKAGE_FILE" | grep -E 'site-packages/(adnus|adnus\.py)' || {
+            echo "HATA: Pakette adnus modülü yok."
+            conda package contents "$PACKAGE_FILE"
+            exit 1
+          }
+
       - name: Install Conda-Build
         shell: bash
         run: |
