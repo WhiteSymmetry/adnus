@@ -33,7 +33,8 @@ jobs:
 
       - name: Build the package for Python ${{ matrix.python-version }}
         run: |
-          export PKG_VERSION=$(git describe --tags --abbrev=0 | sed 's/^v//')
+          # export PKG_VERSION=$(git describe --tags --abbrev=0 | sed 's/^v//')
+          export PKG_VERSION=$(echo "$PYPI_JSON" | python3 -c "
           echo "Building version: $PKG_VERSION for Python ${{ matrix.python-version }}"
           
           conda build . --python ${{ matrix.python-version }} --output-folder ./dist
