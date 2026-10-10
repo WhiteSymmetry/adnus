@@ -10,7 +10,15 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: |
+    echo "SRC_DIR=$SRC_DIR"
+    test -f "$SRC_DIR/pyproject.toml"
+    test -f "$SRC_DIR/adnus/__init__.py"
+
+    {{ PYTHON }} -m pip install "$SRC_DIR" --no-deps --ignore-installed -vv
+
+    echo "Kurulumdan sonra adnus dosyaları:"
+    find "$SP_DIR" -maxdepth 3 -path '*adnus*' -print
 
 requirements:
   host:
@@ -30,11 +38,5 @@ test:
 about:
   home: https://github.com/WhiteSymmetry/adnus
   license: AGPL-3.0-or-later
-  license_file: ../LICENSE
+  license_file: LICENSE
   summary: "adnus (AdNuS): Advanced Number Systems"
-  description: |
-    adnus (AdNuS): Advanced Number Systems, including Bicomplex,
-    Neutrosophic, Hyperreal, Complex, Quaternion, Octonion,
-    Sedenion, Pathion, Chingon, Routon, and Voudon.
-  dev_url: https://github.com/WhiteSymmetry/adnus
-  doc_url: https://github.com/WhiteSymmetry/adnus
