@@ -1,7 +1,7 @@
 # pyproject.toml
 [project]
 name = "adnus"
-version = "0.2.3"
+version = "0.2.4"
 description = "A Python library for Advanced Number Systems (AdNuS), including Bicomplex, Neutrosophic, Hyperreal numbers, reals, Complex, Quaternion, Octonion, Sedenion, Pathion, Chingon, Routon, Voudon."
 authors = [
     {name = "Mehmet Keçeci", email = "enfo@tuta.io"}
