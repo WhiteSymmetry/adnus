@@ -230,6 +230,8 @@ If this library was useful to you in your research, please cite us. Following th
 
 ```
 
+Keçeci, M. (2026). adnus (AdNuS): Advanced Number Systems. Açık Bilim Veri Alanı (ABVA), Aperta. https://doi.org/10.5281/zenodo.16341919
+
 Keçeci, M. (2025). adnus [Data set]. ResearchGate. https://doi.org/10.13140/RG.2.2.13460.26248
 
 Keçeci, M. (2025). adnus [Data set]. OSF. https://doi.org/10.17605/OSF.IO/9C26Y
