@@ -28,7 +28,7 @@ Example Usage:
 """
 
 # Core version information
-__version__ = "0.2.4"
+__version__ = "0.2.5"
 __author__ = "Mehmet Keçeci"
 __license__ = "AGPL-3.0-or-later"
 __copyright__ = "Copyright (C) 2025-2026 Mehmet Keçeci"
