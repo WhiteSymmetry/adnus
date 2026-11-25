@@ -6,8 +6,8 @@ package:
 
 source:
   path: ..
-  url: 
-  blake2b-256: 
+  url: https://files.pythonhosted.org/packages/90/da/e35ea364cdbff373ab99236928b1ab27e5755bdeb7b19e7268f266684889/adnus-0.2.5.tar.gz
+  blake2b-256: 90dae35ea364cdbff373ab99236928b1ab27e5755bdeb7b19e7268f266684889
 
 build:
   noarch: python
