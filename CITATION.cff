@@ -21,6 +21,8 @@ identifiers:
     value: 10.48546/workflowhub.datafile.23.1
   - type: doi
     value: 10.17605/OSF.IO/9C26Y
+  - type: doi
+    value: 10.13140/RG.2.2.13460.26248
 repository-code: 'https://github.com/WhiteSymmetry/adnus'
 url: 'https://github.com/WhiteSymmetry/adnus'
 repository: 'https://anaconda.org/bilgi/adnus'
