@@ -15,8 +15,8 @@ package:
 # location to get the source from
 #`source` are `url`, `sha256`, `md5`, `patches`, `file_name` and `target_directory`
 source:
-  url: 
-  sha256: 
+  url: https://files.pythonhosted.org/packages/90/da/e35ea364cdbff373ab99236928b1ab27e5755bdeb7b19e7268f266684889/adnus-0.2.5.tar.gz
+  sha256: b280109fc76fb3cc3ea4e37a108be5f9f249152cb191b8aa09a8eea344abc4b9
 
 # build number (should be incremented if a new build is made, but version is not incrementing)
 build:
